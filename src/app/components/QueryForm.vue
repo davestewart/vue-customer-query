@@ -30,8 +30,9 @@
                   :error="getError('email')"
         />
         <ui-input label="Question (optional)"
+                  name="text"
                   v-model="values.text"
-                  multiline="true"
+                  type="textarea"
         />
         <div class="field is-grouped">
           <ui-button :disabled="submitting" @click="validate">Submit</ui-button>
@@ -46,8 +47,8 @@
 
 <script>
 /**
-   * @event close the modal was closed
-   */
+ * @event close the modal was closed
+ */
 export default {
 
   data,

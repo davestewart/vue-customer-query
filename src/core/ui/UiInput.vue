@@ -3,14 +3,16 @@
   <div class="field">
     <label class="label">{{ label }}</label>
     <div class="control">
-      <textarea v-if="multiline"
+      <textarea v-if="type === 'textarea'"
+                :name="name"
                 class="textarea"
                 :class="{'is-danger': error}"
                 v-model.trim="input"
                 v-bind="$attrs"
       ></textarea>
       <input v-else
-             type="text"
+             :type="type"
+             :name="name"
              class="input"
              :class="{'is-danger': error}"
              v-model.trim="input"
@@ -28,7 +30,10 @@ import field from '../mixins/field'
 export default {
   extends: field,
   props: {
-    multiline: true
+    type: {
+      type: String,
+      default: 'text'
+    }
   }
 }
 
