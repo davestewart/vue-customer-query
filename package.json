@@ -1,6 +1,7 @@
 {
   "name": "contact-form",
-  "version": "0.1.0",
+  "description": "ClearBank front end developer test",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,7 +13,6 @@
     "bulma": "^0.7.1",
     "vee-validate": "^2.0.9",
     "vue": "^2.5.16",
-    "vuelidate": "^0.7.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
